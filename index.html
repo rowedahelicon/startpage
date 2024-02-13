@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hello, Rowdy!</title>
+        <link rel="stylesheet" href="css/index.min.css">
+        <link rel="stylesheet" href="css/tw.min.css">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    </head>
+    <body>
+        <div id="top-container" class="container md:mx-auto max-w-screen-xl md:my-4 p-5 bg-cover bg-center rounded-xl">
+            <div id="container" class="container md:mx-auto max-w-screen-lg md:my-4 backdrop-blur-sm bg-[#394551]/70 p-2 border-solid border-0 md:border-8 border-black/70 rounded-xl">
+                <Header class="p-2 rounded-t-lg bg-[#043138]/40">
+                    <div class="flex mb-0 p-2">
+                        <div class="flex-auto text-white leading-none text-center inline">
+                            <h1 class="align-middle text-3xl">Welcome home, Rowdy</h1>
+                            <span id="quote" class="text-sm text-gray-400"></span>
+                        </div>
+                    </div>
+                    <div class="h-12 stripes-2"></div>
+                </Header>
+                <main class="p-5 rounded-b-lg">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <!-- Copy and edit me! -->
+                        <div>
+                            <h2 class="text-xl text-orange-400 font-bold">My Sites</h2>
+                            <a href=""><span class="text-gray-400 hover:underline underline-offset-2"></span></a><br>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+    const quotes = [
+        "So I believe in a universe that doesn't care and people who do.", //- Night in the Woods
+        "Your eyes tell me I'm still alive. And no matter what else happens... It's perfect when you're right by my side.", //Learning to Relax - Dan Deacon
+        "You arrived, a soft slow end of time, saying if all we saw were bright lights, darkness is what we'd try to find.", //Learning to Relax - Dan Deacon
+        "Are you a failure? Hmm, I don't know. I'm not sure what I was trying to do.", //Pictures for Sad Children
+        "The woods are lovely, dark, and deep. But I have promises to keep, and miles to go before I sleep." // Stopping by Woods on a Snowy Evening - Robert Frost
+    ];
+    quote = Math.floor(Math.random() * quotes.length);
+    document.getElementById('quote').innerHTML = `"${quotes[quote]}"`;
+
+    const backgrounds = [
+        //"1.jpg"
+    ];
+    background = Math.floor(Math.random() * backgrounds.length);
+    document.getElementById('top-container').style.backgroundImage=`url(images/backgrounds/${backgrounds[background]}`;
+</script>
